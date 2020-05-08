@@ -34,19 +34,24 @@ https://raw.githubusercontent.com/s1oz/embyonekey/master/mb3admin.com.key.pem
 
     10.0.0.10 mb3admin.com
 	
-如在路由劫持,无需其他设置
-如没有在路由劫持,需修改每个客户端劫持
+如有使用ipv6,请将ipv6地址一起加入,可以避免白嫖时而有效时而无效
+<br/>举例OP.根据网络-接口-全局网络选项中的IPv6 ULA 前缀来填写
+<br/>![](https://github.com/s1oz/embyonekey/blob/master/ULA.png)
+<br/>如我的是fd59:5890:1be9::/48 搭建伪站的的IP是10.0.0.10,末尾是10,所以如下填写
+	
+    fd59:5890:1be9::10 mb3admin.com
+	
+<br/>如在主路由劫持,无需其他设置,直接修改hosts即可
+<br/>如有旁路由,可能需要额外在旁路由上修改hosts(可能,未尝试)
+<br/>如没有在路由劫持,需修改将每个客户端劫持到伪站
 
-0. op类路由可以直接在路由中添加额外的hosts文件
+0. OP 梅林类路由可以直接在路由中直接修改hosts文件
 <br/>登陆ssh输入以下命令
-`vi /etc/myhosts`
+`vi /etc/hosts`
 <br/>i 进入编辑状态
-<br/>输入 `10.0.0.10 mb3admin.com`
+<br/>添加 `10.0.0.10 mb3admin.com`
 `:wq` 保存退出
-<br/>登陆op
-<br/>点击网络-HOSTS和解析文件-额外的HOSTS文件中加入
-`/etc/myhosts`
-<br/>保存生效
+<br/>登陆OP-网络-DHCP/DNS-HOSTS 和解析文件 保存并应用
 1. 群辉可以直接登录修改
 <br/>登陆ssh输入以下命令
 `vi /etc/hosts`
