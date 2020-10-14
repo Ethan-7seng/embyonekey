@@ -21,7 +21,7 @@
 ### 步骤说明
 <br/>0. 在群辉中安装好Web Station跟EMBY
 <br/>1. 打开Web Station如图所示新建虚拟主机
-<br><img src="https://github.com/s1oz/embyonekey/blob/master/webstation.png"><br>
+<br><img src="https://raw.githubusercontent.com/hangaj/embyonekey/master/webstation.png"><br>
 <br/>2. 打开群辉控制面板-安全性-证书
 <br/>点击新建-添加新证书-导入证书-选择下载的私钥跟证书
 <br/>证书下载地址
@@ -42,7 +42,7 @@ https://raw.githubusercontent.com/Ethan-7seng/embyonekey/master/mb3admin.com.key
 	
 如有使用ipv6,请将ipv6地址一起加入,可以避免白嫖时而有效时而无效
 <br/>举例OP.根据网络-接口-全局网络选项中的IPv6 ULA 前缀来填写
-<br/>![](https://github.com/s1oz/embyonekey/blob/master/ULA.png)
+<br/>![](https://raw.githubusercontent.com/hangaj/embyonekey/master/ULA.png)
 <br/>如我的是fd59:5890:1be9::/48 搭建伪站的的IP是10.0.0.10,末尾是10,所以如下填写
 	
     fd59:5890:1be9::10 mb3admin.com
@@ -91,11 +91,11 @@ ssh中运行命令查看是否正确返回值
 
 <br/>如图,打开即可拥有会员黄标
 <br/>
-<br/>![](https://github.com/s1oz/embyonekey/blob/master/ko.png)
+<br/>![](https://raw.githubusercontent.com/hangaj/embyonekey/master/ko.png)
 <br/>
 <br/>在Emby Premiere中输入任何秘钥都可以激活成功
 <br/>
-<br/>![](https://github.com/s1oz/embyonekey/blob/master/ko1.png)
+<br/>![](https://github.com/hangaj/embyonekey/blob/master/ko1.png)
 
 #### 客户端证书安装
 如服务器正常白嫖后,客户端还是无法正确显示,一般是证书不正确,请在客户端安装证书
